@@ -23,17 +23,25 @@
 
 body{
   background: url(http://www.fightersgeneration.com/nx4/game/kofxi/kofxi-stage1.gif) no-repeat;
-  background-size:cover
+  background-size:cover;
+  max-height:100vh;
+  overflow:hidden;
+  position:relative;
+  background-position:bottom left
+
 
 
 }
 .dummy{
   background: url(http://www.dinofarmgames.com/wp-content/uploads/2015/04/terry-2x.gif) no-repeat;
   position: absolute;
-  top:50% ;
+  background-size:contain;
+  bottom:0;
+  height:50rem;
   left: 48%;
- height:100%;
   width:350px;
+
+
   
 }
 .dummy2{
