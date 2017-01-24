@@ -7,14 +7,15 @@ function GameService() {
 
     }
     function Target(name, health, slap, punch, kick) {
-        this.name = name,
-            this.health = health,
+        this.name = name;
+            this.health = health;
+            this.startHealth=health;
 
-            this.slap = slap,
-            this.punch = punch,
-            this.kick = kick,
+            this.slap = slap;
+            this.punch = punch;
+            this.kick = kick;
 
-            this.eItems = [],
+            this.eItems = [];
             this.hit = 0
     }
     function Item(name, modifier, description) {
@@ -60,7 +61,7 @@ function GameService() {
 
 
     dataStore.attack = function (type, target) {
-
+ 
         var mods = addMods(target)
 
         
@@ -95,17 +96,19 @@ function GameController() {
 
 
     function update() {
-        var target = dataStore.getTarget('kenji')
+        var target = dataStore.getTarget('kenji') 
 
         if (target.health > 0) {
 
             document.getElementById("health").innerText = target.health.toFixed(2)
+            document.getElementById("myBar").style.width = target.health/target.startHealth*100 + '%'
 
             document.getElementById("hits").innerText = target.hit
 
         }
         else {
             document.getElementById("health").innerText = 'KO!'
+             document.getElementById("myBar").style.width = "0%"
 
             document.getElementById("hits").innerText = target.hit
         }
@@ -117,7 +120,7 @@ function GameController() {
     }
 }
 
-GameController()
+var gc = new GameController()
 //function changeHealth(damage) {
 
 //}

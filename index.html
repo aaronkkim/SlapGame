@@ -13,7 +13,7 @@
 		<div><span>Name:<span class= >Kenji</span></span>
 		</div>
 		<div class="myProgress">
-			<div class="myBar"></div>
+			<div class="myBar"id = 'myBar'></div>
 		</div>
 		<div><span>Health:<span id="health">100</span></span>
 		</div>
@@ -23,9 +23,9 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12 buttonSpace">
-				<button class="btn btn-success" onClick="attack('slap', 'kenji')">Slap</button>
-<button class="btn btn-success" onClick="attack('punch', 'kenji')">Punch</button>
-<button class="btn btn-success" onClick="attack('kick', 'kenji')">Kick</button>
+				<button class="btn btn-success" onClick="gc.attack('slap', 'kenji')">Slap</button>
+<button class="btn btn-success" onClick="gc.attack('punch', 'kenji')">Punch</button>
+<button class="btn btn-success" onClick="gc.attack('kick', 'kenji')">Kick</button>
 
 </div>
 </div>
@@ -34,9 +34,9 @@
 	<div class="row">
 		<div class="col-sm-12 buttonSpace">
 			<div id="items">
-				<button class="btn btn-danger" onClick="addShields('kenji')">Shield </button>
-				<button class="btn btn-danger" onClick="addSword('kenji')">Sword</button>
-				<button class="btn btn-danger" onClick="addAxe('kenji')">Axe</button>
+				<button class="btn btn-danger" onClick="gc.addShields('kenji')">Shield </button>
+				<button class="btn btn-danger" onClick="gc.addSword('kenji')">Sword</button>
+				<button class="btn btn-danger" onClick="gc.addAxe('kenji')">Axe</button>
 			</div>
 		</div>
 	</div>
