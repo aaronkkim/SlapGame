@@ -1,12 +1,50 @@
 <html>
+
 <head>
 	<title>Slap Object Game</title>
-	<link rel="stylesheet" href="">
-	<link rel="stylesheet" href="">
-	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+		crossorigin="anonymous">
+
+	<link rel="stylesheet" href="game.css">
 </head>
+
 <body>
-	
-	<script src=""></script>
+	<div class="labels">
+		<div><span>Name:<span class= >Kenji</span></span>
+		</div>
+		<div class="myProgress">
+			<div class="myBar"></div>
+		</div>
+		<div><span>Health:<span id="health">100</span></span>
+		</div>
+		<div><span>Hits:<span id="hits">0</span></span>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 buttonSpace">
+				<button class="btn btn-success" onClick="attack('slap', 'kenji')">Slap</button>
+<button class="btn btn-success" onClick="attack('punch', 'kenji')">Punch</button>
+<button class="btn btn-success" onClick="attack('kick', 'kenji')">Kick</button>
+
+</div>
+</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12 buttonSpace">
+			<div id="items">
+				<button class="btn btn-danger" onClick="addShields('kenji')">Shield </button>
+				<button class="btn btn-danger" onClick="addSword('kenji')">Sword</button>
+				<button class="btn btn-danger" onClick="addAxe('kenji')">Axe</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="dummy ">
+</div>
+
+<script src="game.js"></script>
 </body>
+
 </html>
